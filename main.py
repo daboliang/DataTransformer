@@ -1,5 +1,6 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QComboBox
+from PyQt5 import QtGui
 
 from Slotfunc import SlotFunctions  # 新增导入
 
@@ -176,5 +177,7 @@ if __name__ == "__main__":
 
     app = QtWidgets.QApplication(sys.argv)
     window = DataTransformer()
+    window.setWindowTitle("DataTransformer")
+    window.setWindowIcon(QtGui.QIcon("logo.ico"))
     window.show()
     sys.exit(app.exec_()) 
