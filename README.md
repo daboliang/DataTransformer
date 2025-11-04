@@ -24,9 +24,9 @@ Data Transformer 是一个基于 PyQt5 开发的图形界面工具，主要用�
 ### 3.1 主界面布局 
 软件采用分页式设计，包含两个主要页面：
 1. 数据转换页面：处理不同格式间的转换
-![mainwindow1.png](source/mainwindow1.png))
+![mainwindow1.png](./source/mainwindow1.png))
 2. 批量处理页面：提供各种批量操作功能
-![mainwindow1.png](source/mainwindow2.png))
+![mainwindow1.png](./source/mainwindow2.png))
 
 ### 3.2 控件说明
 - 路径选择：通过"浏览"按钮选择文件/文件夹路径
