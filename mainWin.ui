@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>864</width>
+    <height>829</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_12">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="Data_Transform_Btn">
+          <property name="text">
+           <string>数据转换</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="Data_Batch_Btn">
+          <property name="text">
+           <string>数据批处理</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QStackedWidget" name="stackedWidget">
+          <property name="styleSheet">
+           <string notr="true">QStackedWidget {
+    border: 2px solid #000000;  /* 设置边框为 2px 黑色实线 */
+    padding: 5px;               /* 设置内边距，避免文字贴边 */
+    border-radius: 5px;         /* 设置边框圆角 */
+    background-color: #f0f0f0;  /* 设置背景颜色为淡灰色 */
+    color: #333333;             /* 设置文字颜色 */
+    font-size: 14px;            /* 设置字体大小 */
+}
+</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="page">
+           <layout class="QGridLayout" name="gridLayout_11" rowstretch="15,1" rowminimumheight="0,0">
+            <item row="0" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0,0">
+              <item>
+               <widget class="QFrame" name="frame">
+                <property name="styleSheet">
+                 <string notr="true">QFrame {
+    border: 2px solid #000000;  /* 设置边框为 2px 黑色实线 */
+    padding: 5px;               /* 设置内边距，避免文字贴边 */
+    border-radius: 5px;         /* 设置边框圆角 */
+    background-color: #f0f0f0;  /* 设置背景颜色为淡灰色 */
+    color: #333333;             /* 设置文字颜色 */
+    font-size: 14px;            /* 设置字体大小 */
+}
+</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_8" rowstretch="1,4">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_6">
+                   <property name="text">
+                    <string>Yolo数据</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <layout class="QGridLayout" name="gridLayout_2">
+                   <item row="2" column="2">
+                    <widget class="QLineEdit" name="Yolo_labelsPath_lineEdit"/>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QPushButton" name="Yolo_labelsPath_Btn">
+                     <property name="text">
+                      <string>打开文件夹</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_13">
+                     <property name="text">
+                      <string>class路径</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="2">
+                    <widget class="QLineEdit" name="Yolo_imagesPath_lineEdit"/>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label">
+                     <property name="text">
+                      <string>images目录</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="3">
+                    <widget class="QPushButton" name="Yolo_imagesPath_Btn">
+                     <property name="text">
+                      <string>打开文件夹</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="3">
+                    <widget class="QPushButton" name="Yolo_classPath_Btn">
+                     <property name="text">
+                      <string>打开文件</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_2">
+                     <property name="text">
+                      <string>labels目录</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="2">
+                    <widget class="QLineEdit" name="Yolo_classPath_lineEdit"/>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QPushButton" name="Yolo_RootPath_Btn">
+                     <property name="text">
+                      <string>打开文件夹</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_18">
+                     <property name="text">
+                      <string>根目录</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QLineEdit" name="Yolo_RootPath_lineEdit"/>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_2">
+                <property name="styleSheet">
+                 <string notr="true">QFrame {
+    border: 2px solid #000000;  /* 设置边框为 2px 黑色实线 */
+    padding: 5px;               /* 设置内边距，避免文字贴边 */
+    border-radius: 5px;         /* 设置边框圆角 */
+    background-color: #f0f0f0;  /* 设置背景颜色为淡灰色 */
+    color: #333333;             /* 设置文字颜色 */
+    font-size: 14px;            /* 设置字体大小 */
+}
+</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_9" rowstretch="1,4">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_5">
+                   <property name="text">
+                    <string>COCO数据</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <layout class="QGridLayout" name="gridLayout_3">
+                   <item row="1" column="2">
+                    <widget class="QPushButton" name="COCO_trainPath_Btn">
+                     <property name="text">
+                      <string>打开文件夹</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="COCO_trainPath_lineEdit"/>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="COCO_RootPath_lineEdit"/>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_4">
+                     <property name="text">
+                      <string>val目录</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_3">
+                     <property name="text">
+                      <string>train目录</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QPushButton" name="COCO_valPath_Btn">
+                     <property name="text">
+                      <string>打开文件夹</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_19">
+                     <property name="text">
+                      <string>根目录</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="COCO_valPath_lineEdit"/>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QPushButton" name="COCO_RootPath_Btn">
+                     <property name="text">
+                      <string>打开文件夹</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_20">
+                     <property name="text">
+                      <string>annotations目录</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLineEdit" name="COCO_annotationsPath_lineEdit"/>
+                   </item>
+                   <item row="3" column="2">
+                    <widget class="QPushButton" name="COCO_annotationsPath_Btn">
+                     <property name="text">
+                      <string>打开文件夹</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_3">
+                <property name="styleSheet">
+                 <string notr="true">QFrame {
+    border: 2px solid #000000;  /* 设置边框为 2px 黑色实线 */
+    padding: 5px;               /* 设置内边距，避免文字贴边 */
+    border-radius: 5px;         /* 设置边框圆角 */
+    background-color: #f0f0f0;  /* 设置背景颜色为淡灰色 */
+    color: #333333;             /* 设置文字颜色 */
+    font-size: 14px;            /* 设置字体大小 */
+}
+</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_10" rowstretch="1,4">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_17">
+                   <property name="text">
+                    <string>VOC数据</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <layout class="QGridLayout" name="gridLayout_6">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_16">
+                     <property name="text">
+                      <string>ImageSets目录</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_15">
+                     <property name="text">
+                      <string>Annotations目录</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QPushButton" name="VOC_ImageSetsPath_Btn">
+                     <property name="text">
+                      <string>打开文件夹</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="VOC_AnnotationsPath_lineEdit"/>
+                   </item>
+                   <item row="3" column="2">
+                    <widget class="QPushButton" name="VOC_JPEGImagesPat_Btn">
+                     <property name="text">
+                      <string>打开文件夹</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="2">
+                    <widget class="QPushButton" name="VOC_AnnotationsPath_Btn">
+                     <property name="text">
+                      <string>打开文件夹</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="VOC_ImageSetsPath_lineEdit"/>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_21">
+                     <property name="text">
+                      <string>JPEGImages目录</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLineEdit" name="VOC_JPEGImagesPath_lineEdit"/>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_22">
+                     <property name="text">
+                      <string>根目录</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="VOC_RootPath_lineEdit"/>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QPushButton" name="VOC_RootPath_Btn">
+                     <property name="text">
+                      <string>打开文件夹</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <widget class="QFrame" name="frame_4">
+              <property name="styleSheet">
+               <string notr="true">QFrame {
+    border: 2px solid #000000;  /* 设置边框为 2px 黑色实线 */
+    padding: 5px;               /* 设置内边距，避免文字贴边 */
+    border-radius: 5px;         /* 设置边框圆角 */
+    background-color: #f0f0f0;  /* 设置背景颜色为淡灰色 */
+    color: #333333;             /* 设置文字颜色 */
+    font-size: 14px;            /* 设置字体大小 */
+}
+QLabel {
+    border: 0px;  /* 设置边框为 2px 黑色实线 */
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <item>
+                  <widget class="QLabel" name="label_24">
+                   <property name="text">
+                    <string>将</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="YCV_comboBox1"/>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_23">
+                   <property name="text">
+                    <string>转换为</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="YCV_comboBox2"/>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="Transform_Btn">
+                   <property name="text">
+                    <string>开始转换</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <item>
+                  <widget class="QLabel" name="label_33">
+                   <property name="text">
+                    <string>可视化输出路径</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="OutputVisPath_lineEdit"/>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_OutputVisPath">
+                   <property name="text">
+                    <string>打开文件夹</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_Visual">
+                   <property name="text">
+                    <string>可视化</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_2">
+           <property name="styleSheet">
+            <string notr="true">QFrame {
+    border: 2px solid #000000;  /* 设置边框为 2px 黑色实线 */
+    padding: 5px;               /* 设置内边距，避免文字贴边 */
+    border-radius: 5px;         /* 设置边框圆角 */
+    background-color: #f0f0f0;  /* 设置背景颜色为淡灰色 */
+    color: #333333;             /* 设置文字颜色 */
+    font-size: 14px;            /* 设置字体大小 */
+}
+</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_14">
+            <item row="0" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,5,4">
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>数据操作</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="gridLayout_5" rowstretch="1,1,1,1,1,0">
+                <item row="0" column="2">
+                 <widget class="QPushButton" name="Btn_images">
+                  <property name="text">
+                   <string>打开文件夹</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QLabel" name="label_10">
+                  <property name="text">
+                   <string>out_labels路径</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_8">
+                  <property name="text">
+                   <string>images目录</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_9">
+                  <property name="text">
+                   <string>labels目录</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="2">
+                 <widget class="QPushButton" name="Btn_out_images">
+                  <property name="text">
+                   <string>打开文件夹</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QLabel" name="label_14">
+                  <property name="text">
+                   <string>out_images路径</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_27">
+                  <property name="text">
+                   <string>jsons目录</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="Btn_labels">
+                  <property name="text">
+                   <string>打开文件夹</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="labelsPath_lineEdit"/>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="jsonsPath_lineEdit"/>
+                </item>
+                <item row="5" column="2">
+                 <widget class="QPushButton" name="Btn_out_labels">
+                  <property name="text">
+                   <string>打开文件夹</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="imagesPath_lineEdit"/>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QLineEdit" name="out_labelsPath_lineEdit"/>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QLineEdit" name="out_imagesPath_lineEdit"/>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QPushButton" name="Btn_jsons">
+                  <property name="text">
+                   <string>打开文件夹</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_30">
+                  <property name="text">
+                   <string>class文件</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="classPath_lineEdit"/>
+                </item>
+                <item row="3" column="2">
+                 <widget class="QPushButton" name="pushButton_classPath">
+                  <property name="text">
+                   <string>打开文件</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_5">
+                <property name="styleSheet">
+                 <string notr="true">QFrame {
+    border: 2px solid #000000;  /* 设置边框为 2px 黑色实线 */
+    padding: 5px;               /* 设置内边距，避免文字贴边 */
+    border-radius: 5px;         /* 设置边框圆角 */
+    background-color: #f0f0f0;  /* 设置背景颜色为淡灰色 */
+    color: #333333;             /* 设置文字颜色 */
+    font-size: 14px;            /* 设置字体大小 */
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_4">
+                 <item row="4" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <item>
+                    <widget class="QPushButton" name="pushButton_json2txt">
+                     <property name="text">
+                      <string>json转txt</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_txt2json">
+                     <property name="text">
+                      <string>txt转json</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="5" column="0">
+                  <widget class="QPushButton" name="pushButton_SplitByType">
+                   <property name="text">
+                    <string>按照文件类型分离</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <layout class="QGridLayout" name="gridLayout_7">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_29">
+                     <property name="text">
+                      <string>resized大小</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="3">
+                    <widget class="QPushButton" name="pushButton_split">
+                     <property name="text">
+                      <string>开始划分</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1" colspan="2">
+                    <widget class="QDoubleSpinBox" name="doubleSpinBox_SplitRate"/>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_11">
+                     <property name="text">
+                      <string>划分比例</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0" colspan="4">
+                    <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,2,1,2,1">
+                     <item>
+                      <widget class="QLabel" name="label_12">
+                       <property name="text">
+                        <string>初始文件名</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSpinBox" name="spinBox_FirstName"/>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_28">
+                       <property name="styleSheet">
+                        <string notr="true">QLabel {
+	border:0;  /* 设置边框为 2px 黑色实线 */
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>+后缀</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="SecondName_lineEdit"/>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_rename">
+                       <property name="text">
+                        <string>修改文件名</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QPushButton" name="pushButton_resize">
+                     <property name="text">
+                      <string>resize</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1" colspan="2">
+                    <widget class="QSpinBox" name="spinBox_ImageSize"/>
+                   </item>
+                   <item row="8" column="0" colspan="4">
+                    <widget class="QFrame" name="frame_6">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_13">
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="label_25">
+                        <property name="text">
+                         <string>初始文件夹</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="1">
+                       <widget class="QPushButton" name="pushButton_OriginFloder">
+                        <property name="text">
+                         <string>打开</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QPushButton" name="pushButton_TargetFloder">
+                        <property name="text">
+                         <string>打开</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="2">
+                       <widget class="QLineEdit" name="TargetFloder_lineEdit"/>
+                      </item>
+                      <item row="0" column="2">
+                       <widget class="QLineEdit" name="OriginFloder_lineEdit"/>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QLabel" name="label_26">
+                        <property name="text">
+                         <string>目标文件夹</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="3">
+                       <widget class="QPushButton" name="pushButton_Move">
+                        <property name="text">
+                         <string>移动</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="3">
+                       <widget class="QPushButton" name="pushButton_Copy">
+                        <property name="text">
+                         <string>复制</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="4" rowspan="2">
+                       <widget class="QComboBox" name="comboBox_Suffix"/>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="2" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,2,1">
+                   <item>
+                    <widget class="QLabel" name="label_31">
+                     <property name="text">
+                      <string>特征增强</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboBox_FeatureEnhance"/>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_FeatureEnhance">
+                     <property name="text">
+                      <string>增强</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="3" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,2,1">
+                   <item>
+                    <widget class="QLabel" name="label_32">
+                     <property name="text">
+                      <string>数据增广</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboBox_DataAugment"/>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_DataAugmeny">
+                     <property name="text">
+                      <string>增广</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>864</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
